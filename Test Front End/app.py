@@ -168,13 +168,13 @@ def predict_finbert_sentiment(text):
     return fair_score
 
 
-def predict_sentiment(text):
-    inputs = sentiment_tokenizer(text, return_tensors="pt", truncation=True, padding=True, max_length=512)
-    with torch.no_grad():
-        outputs = sentiment_model(**inputs)
-    scores = torch.nn.functional.softmax(outputs.logits, dim=-1)
-    sentiment_score = scores[:, 2].item() - scores[:, 0].item()  # Positive score minus Negative score
-    return sentiment_score
+# def predict_sentiment(text):
+#     inputs = sentiment_tokenizer(text, return_tensors="pt", truncation=True, padding=True, max_length=512)
+#     with torch.no_grad():
+#         outputs = sentiment_model(**inputs)
+#     scores = torch.nn.functional.softmax(outputs.logits, dim=-1)
+#     sentiment_score = scores[:, 2].item() - scores[:, 0].item()  # Positive score minus Negative score
+#     return sentiment_score
 
 
 def predict_macroecon(text):
