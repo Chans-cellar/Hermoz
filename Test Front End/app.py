@@ -27,11 +27,11 @@ tokenizer_directory = 'E:\\studies\\USJ FOT\\lecture\\Research\\CodeBase\\Classi
 tokenizer = BertTokenizer.from_pretrained(tokenizer_directory)
 model = BertForSequenceClassification.from_pretrained(model_directory)
 
-# Load sentiment analysis model
-sentiment_model_directory = 'E:\\studies\\USJ FOT\\lecture\\Research\\CodeBase\\Sentiment Model\\sentiment_v1'
-sentiment_tokenizer_directory = 'E:\\studies\\USJ FOT\\lecture\\Research\\CodeBase\\Sentiment Model\\sentiment_v1_tokenizer'
-sentiment_tokenizer = RobertaTokenizer.from_pretrained(sentiment_tokenizer_directory)
-sentiment_model = RobertaForSequenceClassification.from_pretrained(sentiment_model_directory)
+# # Load sentiment analysis model
+# sentiment_model_directory = 'E:\\studies\\USJ FOT\\lecture\\Research\\CodeBase\\Sentiment Model\\sentiment_v1'
+# sentiment_tokenizer_directory = 'E:\\studies\\USJ FOT\\lecture\\Research\\CodeBase\\Sentiment Model\\sentiment_v1_tokenizer'
+# sentiment_tokenizer = RobertaTokenizer.from_pretrained(sentiment_tokenizer_directory)
+# sentiment_model = RobertaForSequenceClassification.from_pretrained(sentiment_model_directory)
 
 # Load finBERT model
 finbert_tokenizer = BertTokenizer.from_pretrained('ProsusAI/finbert')
